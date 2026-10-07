@@ -33,11 +33,19 @@ function App() {
             return "Caldo";
         }
     }
+    
+    function disableButton() {
+        if(gradi<17){
+            return true;
+        }else if(gradi>27){
+            return true;
+        }else return false;
+    }
 
   return (
     <div className="min-vh-100 d-flex flex-column">
       <Header />
-      <GradiContext.Provider value={{gradi, handleAumentaGradi, handleDiminuisciGradi, handleReset, handleLabelGradi}}>
+      <GradiContext.Provider value={{gradi, handleAumentaGradi, handleDiminuisciGradi, handleReset, handleLabelGradi, disableButton}}>
       <div className="d-flex flex-grow-1">
         <Sidebar/>
         <main className="flex-grow-1">
