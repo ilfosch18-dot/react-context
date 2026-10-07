@@ -1,8 +1,8 @@
-import { useState } from "react"
+import { useContext } from "react"
+import GradiContext from "../../contexts/GradiContext"
 
-export default function ThermostatSection({gradi, handleAumentaGradi, handleDiminuisciGradi, handleReset}) {   
-
-
+export default function ThermostatSection() {   
+    const {gradi, handleAumentaGradi, handleDiminuisciGradi, handleReset} = useContext(GradiContext);
     return (
     <div>
 <div className="container text-center">
