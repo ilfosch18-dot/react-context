@@ -1,23 +1,7 @@
 import { useState } from "react"
 
-export default function ThermostatSection() {   
-    const [gradi, setGradi] = useState(20)
+export default function ThermostatSection({gradi, handleAumentaGradi, handleDiminuisciGradi, handleReset}) {   
 
-    function handleAumentaGradi() {
-        if(gradi<28){
-            setGradi(actual => actual + 1);
-    }else return;
-    }
-
-    function handleDiminuisciGradi() {
-        if(gradi>16){
-            setGradi(actual => actual - 1);
-    }else return;
-    }
-    
-    function reset() {
-        setGradi(20);
-    }
 
     return (
     <div>
@@ -27,7 +11,7 @@ export default function ThermostatSection() {
 
     <button className="btn btn-primary me-2" onClick={handleDiminuisciGradi}>Diminuisci gradi</button>
 
-    <button className="btn btn-secondary" onClick={reset}>Riporta alla normalità</button>
+    <button className="btn btn-secondary" onClick={handleReset}>Riporta alla normalità</button>
 </div>
     </div>
     )
