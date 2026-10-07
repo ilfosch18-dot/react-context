@@ -23,10 +23,21 @@ function App() {
     function handleReset() {
         setGradi(20);
     }
+
+    function handleLabelGradi() {
+        if(gradi<17){
+            return "Freddo";
+        }else if(gradi>=17 && gradi<=24){
+            return "Comfort";
+        }else if(gradi>24){
+            return "Caldo";
+        }
+    }
+
   return (
     <div className="min-vh-100 d-flex flex-column">
       <Header />
-      <GradiContext.Provider value={{gradi, handleAumentaGradi, handleDiminuisciGradi, handleReset}}>
+      <GradiContext.Provider value={{gradi, handleAumentaGradi, handleDiminuisciGradi, handleReset, handleLabelGradi}}>
       <div className="d-flex flex-grow-1">
         <Sidebar/>
         <main className="flex-grow-1">
