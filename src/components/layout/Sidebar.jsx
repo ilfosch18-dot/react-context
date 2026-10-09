@@ -1,9 +1,8 @@
-import { useContext } from "react";
-import GradiContext from "../../contexts/GradiContext";
+import {useGradiContext} from "../../contexts/GradiContext";
 
 export default function Sidebar() {
 
-    const {handleReset} = useContext(GradiContext);
+    const {handleReset} = useGradiContext();
     return (
         <aside className="w-25 px-4 border-end pt-5">
             <h4 className="h5">My App sidebar</h4>

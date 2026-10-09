@@ -1,8 +1,7 @@
-import { useContext } from "react"
-import GradiContext from "../../contexts/GradiContext"
+import {useGradiContext} from "../../contexts/GradiContext"
 
 export default function Footer() {
-const {gradi} = useContext(GradiContext);
+const {gradi} = useGradiContext();
 
     return (
         <footer className="bg-light text-dark text-center py-3">
